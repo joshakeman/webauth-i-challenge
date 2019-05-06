@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/joshakeman/webauth-i-challenge#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.4",
+    "knex": "^0.16.5",
+    "nodemon": "^1.19.0",
+    "sqlite3": "^4.0.6"
   }
 }
