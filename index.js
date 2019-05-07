@@ -51,7 +51,7 @@ server.post('/api/register', (req, res) => {
       .first()
       .then(user => {
           if (user && bcrypt.compareSync(password, user.password)) {
-              req.session.name = user.name
+              req.session.newkey = user.name
 
               res.status(200).json({ message: 'Logged In'})
           } else {
@@ -61,6 +61,7 @@ server.post('/api/register', (req, res) => {
   });
 
   server.get('/api/users', restricted, (req, res) => {
+    console.log(req.session.name)
       Users.find()
         .then(users => {
             res.json(users)
